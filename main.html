@@ -3,12 +3,18 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Promise Performance Comparison</title>
+  <title>Promise.all vs Promise.any</title>
   <style>
     body {
       font-family: Arial, sans-serif;
       padding: 20px;
       background-color: #f9f9f9;
+    }
+    h1 {
+      color: #333;
+    }
+    p {
+      color: #555;
     }
     table {
       width: 100%;
@@ -20,28 +26,34 @@
     }
     th, td {
       padding: 10px;
-      text-align: left;
+      text-align: center;
     }
     th {
       background-color: #007bff;
       color: white;
     }
     button {
-      padding: 10px 15px;
+      padding: 10px 20px;
       background-color: #007bff;
       color: white;
       border: none;
+      border-radius: 4px;
       cursor: pointer;
     }
     button:hover {
       background-color: #0056b3;
     }
+    #loading {
+      color: green;
+      margin-top: 10px;
+    }
   </style>
 </head>
 <body>
   <h1>Promise.all vs Promise.any Performance</h1>
-  <p>Click the button to fetch data using both methods and compare the performance.</p>
+  <p>Click the button below to compare the performance of Promise.all and Promise.any when fetching data from multiple APIs.</p>
   <button id="compare">Compare Performance</button>
+  <p id="loading" style="display: none;">Fetching data...</p>
   <table>
     <thead>
       <tr>
@@ -64,4 +76,5 @@
   <script src="script.js"></script>
 </body>
 </html>
+
 
